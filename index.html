@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#faf8f2">
+    <title>TripWise — Discover Your Next Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="brand">
+            <span class="brand-icon">⌁</span>
+            TripWise<span class="brand-dot">.</span>
+        </a>
+
+        <span class="brand-subtitle">SMART TRAVEL PLANNER</span>
+
+        <nav>
+            <a href="#explore" class="nav-link active">Explore</a>
+            <a href="#my-trip" class="nav-link">My Trip <span id="navCount">0</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow light">YOUR NEXT ADVENTURE STARTS HERE</p>
+                <h1>Discover places.<br>Collect memories.</h1>
+                <p class="hero-description">
+                    Find extraordinary places and plan a journey
+                    that stays with you forever.
+                </p>
+                <a href="#explore" class="hero-button">
+                    Explore destinations <span>↗</span>
+                </a>
+            </div>
+            <div class="hero-note">Better journeys,<br>together.</div>
+        </section>
+
+        <div class="page-layout">
+            <div class="main-content">
+
+                <section id="explore" class="explore-section">
+                    <div class="search-panel">
+                        <label class="search-box">
+                            <span>⌕</span>
+                            <input
+                                type="text"
+                                id="searchInput"
+                                placeholder="Search destinations..."
+                                aria-label="Search destinations"
+                            >
+                        </label>
+
+                        <select id="categoryFilter" aria-label="Filter by category">
+                            <option value="all">All categories</option>
+                            <option value="nature">Nature</option>
+                            <option value="cultural">Cultural</option>
+                            <option value="historic">Historic</option>
+                            <option value="beach">Beach</option>
+                        </select>
+
+                        <select id="sortSelect" aria-label="Sort destinations">
+                            <option value="name">Sort by name</option>
+                            <option value="rating">Sort by rating</option>
+                        </select>
+                    </div>
+
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow">FIND YOUR NEXT STOP</p>
+                            <h2>Explore destinations<span class="heading-dot">.</span></h2>
+                            <p class="section-description">
+                                Handpicked places for your next great story.
+                            </p>
+                        </div>
+                        <span class="results-label" id="resultsCount">Loading...</span>
+                    </div>
+
+                    <p id="statusMessage" class="status-message" role="status">
+                        Discovering beautiful destinations...
+                    </p>
+
+                    <div id="destinationList" class="destination-grid"></div>
+                </section>
+            </div>
+
+            <aside id="my-trip" class="trip-sidebar">
+                <div class="trip-header">
+                    <div class="trip-title-row">
+                        <span class="bookmark-icon">▣</span>
+                        <h2>My Trip</h2>
+                        <span class="trip-count" id="tripCount">0</span>
+                    </div>
+                    <p>Every great journey starts with a plan.</p>
+                </div>
+
+                <div id="itineraryList" class="itinerary-list"></div>
+
+                <div id="emptyTrip" class="empty-trip">
+                    <div class="empty-illustration">
+                        <span class="map-fold">⌑</span>
+                        <span class="map-pin">●</span>
+                    </div>
+                    <h3>Your story starts here</h3>
+                    <p>Save the places you dream of visiting. Your personal adventure awaits.</p>
+                    <a href="#explore" class="sidebar-button">
+                        Find your places <span>→</span>
+                    </a>
+                </div>
+
+                <div class="travel-tip">
+                    <span class="tip-icon">✳</span>
+                    <div>
+                        <h3>A little travel tip</h3>
+                        <p>The best journeys begin with a single destination.</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <section id="details" class="details-section" hidden>
+            <button id="closeDetails" class="close-button">← Back to exploring</button>
+            <div id="detailsContent"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#" class="footer-brand">⌁ TripWise<span>.</span></a>
+        <p>Made for curious travellers. © 2026 TripWise</p>
+        <a href="#explore">Your next adventure awaits ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
